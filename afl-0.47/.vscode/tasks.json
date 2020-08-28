@@ -1,0 +1,35 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++ build active file",
+            "command": "/usr/bin/cc",
+            "args": [
+                "-O3",
+                "-Wall",
+                "-D_FORTIFY_SOURCE=2",
+                "-g",
+                "-Wno-pointer-sign",
+                "-DAFL_PATH=\"//home/bluesky/src/afl/afl-0.47/\"",
+                "-DVERSION=\"0.47\"",
+                "-Wno-format",
+                "-DUSE_ASAN=1",
+                "$(LDFLAGS)",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
