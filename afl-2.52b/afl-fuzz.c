@@ -8079,7 +8079,6 @@ stop_fuzzing:
            "    (For info on resuming, see %s/README.)\n", doc_path);
 
   }
-
   fclose(plot_file);
   destroy_queue();
   destroy_extras();

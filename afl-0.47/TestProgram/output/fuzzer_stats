@@ -1,0 +1,9 @@
+cycles_done    : 1
+execs_done     : 382577
+paths_total    : 70
+cur_path       : 0
+pending_favs   : 3
+pending_total  : 25
+variable_paths : 0
+unique_crashes : 7
+unique_hangs   : 500

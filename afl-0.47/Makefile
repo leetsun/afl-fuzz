@@ -21,7 +21,7 @@ HELPER_PATH = /home/bluesky/src/afl/afl-0.47
 
 PROGS       = afl-gcc afl-as afl-fuzz afl-showmap
 
-CFLAGS     += -O3 -Wall -D_FORTIFY_SOURCE=2 -g -Wno-pointer-sign \
+CFLAGS     += -Wall -D_FORTIFY_SOURCE=2 -g -Wno-pointer-sign \
 	      -DAFL_PATH=\"$(HELPER_PATH)\" -DVERSION=\"$(VERSION)\"
 
 GCC48PLUS  := $(shell expr `$(CC) -dumpversion | cut -f-2 -d.` \>= 4.8)

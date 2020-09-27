@@ -1,0 +1,14 @@
+This directory is the test program for AFL fuzz.
+
+IsTree_xxx are c programs, which are compiled from the same source file IsTree.c.
+Makefile is for IsTree program.
+test.xx is middle files in compiling process, using for understanding gcc process.
+
+"count.c and count program" are from afl-fuzz.c's function named "count_bits", using for understanding this algorithm.
+
+mylib.c and mylib.so rewrite api function "settimer", using for conceil timeout when fuzzing when gdb.
+using:export LD_PRELOAD=./mylibso
+
+The other directory are auxilay for afl running, the fuzzing command is :
+    ../afl-fuzz -i cases -o output -f tc.txt IsTree_xxx tc.txt
+    (export AFL_PATH=.. befor fuzzing)
